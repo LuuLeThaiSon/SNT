@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+</body>
+</html>
+
+<script>
+     let num = +prompt("Enter number:");
+     let count = 0; //biến đếm ước 
+     let countSNT = 0; //biến đếm số lượng snt
+
+     for (let i = 2; i < 10000; i++) {
+          if (countSNT<num) {
+               for (let j = 1; j<=i;j++) {
+                    if (i%j==0) {
+                         count++
+                    }
+               }
+               if (count==2) {
+                    document.write(i+"<br>");
+                    countSNT+=1
+               }
+               count=0
+          } else {
+               break;
+          }
+     }
+</script>
